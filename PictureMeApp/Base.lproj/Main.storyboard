@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="PictureMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIv-hd-h9g">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpu-dy-PvR">
+                                        <rect key="frame" x="547" y="20" width="33" height="30"/>
+                                        <state key="normal" title="Conf">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picture Me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZtH-8r-qRm">
+                                        <rect key="frame" x="258" y="24" width="83" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.37462060700329691" green="1" blue="0.79303801701478427" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="ZtH-8r-qRm" secondAttribute="centerX" id="0kO-Gw-cmX"/>
+                                    <constraint firstAttribute="height" constant="70" id="WTV-WC-rb9"/>
+                                    <constraint firstAttribute="trailing" secondItem="lpu-dy-PvR" secondAttribute="trailing" constant="20" id="gho-hP-f2L"/>
+                                    <constraint firstAttribute="centerY" secondItem="ZtH-8r-qRm" secondAttribute="centerY" id="xg0-h0-NoR"/>
+                                    <constraint firstAttribute="centerY" secondItem="lpu-dy-PvR" secondAttribute="centerY" id="xqd-uz-Ckm"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8YE-7v-2dJ">
+                                <rect key="frame" x="90" y="188" width="420" height="224"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="420" id="o44-xm-FNF"/>
+                                    <constraint firstAttribute="height" constant="224" id="rk8-Hr-1v9"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6E6-KF-W03">
+                                <rect key="frame" x="528" y="550" width="36" height="30"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFK-Bh-xeu">
+                                <rect key="frame" x="36" y="550" width="43" height="30"/>
+                                <state key="normal" title="Select">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="photoFromLibrary:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0wb-CJ-r2d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="8YE-7v-2dJ" secondAttribute="centerX" id="5Dv-Sn-6mo"/>
+                            <constraint firstAttribute="centerX" secondItem="8YE-7v-2dJ" secondAttribute="centerX" id="HH5-tX-h42"/>
+                            <constraint firstItem="XFK-Bh-xeu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="U7E-cw-Z3y"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="XFK-Bh-xeu" secondAttribute="bottom" constant="20" id="Vee-TZ-5Ek"/>
+                            <constraint firstItem="aIv-hd-h9g" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="bS6-hb-8R0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aIv-hd-h9g" secondAttribute="trailing" constant="-16" id="iYX-PW-fPg"/>
+                            <constraint firstItem="aIv-hd-h9g" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="k1i-Wo-tq2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6E6-KF-W03" secondAttribute="trailing" constant="20" id="lOL-kQ-Bzn"/>
+                            <constraint firstAttribute="centerY" secondItem="8YE-7v-2dJ" secondAttribute="centerY" id="oiU-Cn-2Pn"/>
+                            <constraint firstAttribute="centerY" secondItem="8YE-7v-2dJ" secondAttribute="centerY" id="vCu-hs-8mp"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="6E6-KF-W03" secondAttribute="bottom" constant="20" id="wvW-Wd-bgp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myImageView" destination="8YE-7v-2dJ" id="75M-cF-xKh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
